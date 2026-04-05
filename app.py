@@ -2,7 +2,7 @@
 app.py — Flask アプリケーション本体
 介護シフト自動作成アプリ
 """
-　
+
 import json
 import logging
 import os
