@@ -27,7 +27,7 @@ from flask import (
 app = Flask(__name__)
 @app.route("/")
 def index():
-    return "シフトアプリ起動中"
+    return render_template("index.html")
 
 from flask_wtf.csrf import CSRFProtect
 
