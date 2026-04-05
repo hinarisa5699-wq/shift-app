@@ -23,6 +23,7 @@ from flask import (
     flash,
     send_file,
 )
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your-secret-key"
@@ -31,8 +32,6 @@ csrf = CSRFProtect(app)
 @app.route("/")
 def index():
     return render_template("index.html")
-
-from flask_wtf.csrf import CSRFProtect
 
 import jpholiday
 from config import Config
