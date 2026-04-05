@@ -25,6 +25,10 @@ from flask import (
 )
 
 app = Flask(__name__)
+@app.route("/")
+def index():
+    return "シフトアプリ起動中"
+
 from flask_wtf.csrf import CSRFProtect
 
 import jpholiday
