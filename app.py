@@ -501,11 +501,10 @@ def create_app():
             cooking_count=cooking_count,
         )
 
-    @app.route("/staff")
-    def staff_list():
-        """職員一覧"""
-        staffs = Staff.query.order_by(Staff.id).all()
-        return render_template("staff_list.html", staff_list=staffs)
+   @app.route("/staff", endpoint="staff_list")
+def staff_list():
+    staffs = Staff.query.order_by(Staff.id).all()
+    return render_template("staff_list.html", staff_list=staffs)
 
     @app.route("/staff/new")
     def staff_new():
