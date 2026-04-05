@@ -25,6 +25,9 @@ from flask import (
 )
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "your-secret-key"
+csrf = CSRFProtect(app)
+
 @app.route("/")
 def index():
     return render_template("index.html")
