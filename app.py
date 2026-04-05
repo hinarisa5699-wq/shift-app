@@ -499,12 +499,11 @@ def create_app():
             dual_count=dual_count,
             care_count=care_count,
             cooking_count=cooking_count,
-        )
-
-   @app.route("/staff", endpoint="staff_list")
-   def staff_list():
-    staffs = Staff.query.order_by(Staff.id).all()
-    return render_template("staff_list.html", staff_list=staffs)
+  )
+  @app.route("/staff")
+  def staff_list():
+        staffs = Staff.query.order_by(Staff.id).all()
+        return render_template("staff_list.html", staff_list=staffs)
 
     @app.route("/staff/new")
     def staff_new():
