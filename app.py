@@ -502,7 +502,7 @@ def create_app():
         )
 
    @app.route("/staff", endpoint="staff_list")
-　 def staff_list():
+   def staff_list():
     staffs = Staff.query.order_by(Staff.id).all()
     return render_template("staff_list.html", staff_list=staffs)
 
