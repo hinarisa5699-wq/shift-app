@@ -1,8 +1,8 @@
 Flask==3.1.0
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.2
-ortools==9.12
+WTForms==3.2.1
 openpyxl==3.1.5
-greenlet==3.3.2
+greenlet==3.1.1
 holidays
 gunicorn
