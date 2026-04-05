@@ -24,6 +24,7 @@ from flask import (
     send_file,
 )
 
+app = Flask(__name__)
 from flask_wtf.csrf import CSRFProtect
 
 import jpholiday
