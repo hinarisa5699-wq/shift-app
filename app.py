@@ -499,7 +499,8 @@ def create_app():
             dual_count=dual_count,
             care_count=care_count,
             cooking_count=cooking_count,
-  )
+        )
+        
   @app.route("/staff")
   def staff_list():
         staffs = Staff.query.order_by(Staff.id).all()
